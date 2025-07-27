@@ -1,0 +1,99 @@
+<!-- 字体大小控制器 -->
+{% assign font_size = page.font_size | default: site.data.font-sizes.default %}
+{% assign size_config = site.data.font-sizes.sizes[font_size] %}
+
+<style>
+/* 基础字体大小设置 */
+.page__content {
+  font-size: {{ size_config.content }} !important;
+  line-height: {{ size_config.line_height }};
+}
+
+.page__content h1 { 
+  font-size: {{ size_config.h1 }} !important; 
+  margin-bottom: 0.8em;
+}
+
+.page__content h2 { 
+  font-size: {{ size_config.h2 }} !important; 
+  margin-top: 1.5em;
+  margin-bottom: 0.7em;
+}
+
+.page__content h3 { 
+  font-size: {{ size_config.h3 }} !important; 
+  margin-top: 1.3em;
+  margin-bottom: 0.6em;
+}
+
+.page__content h4 { 
+  font-size: {{ size_config.h4 }} !important; 
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+/* 代码块字体 */
+.page__content pre, 
+.page__content code,
+.page__content .highlight {
+  font-size: {{ size_config.code }} !important;
+}
+
+/* 目录字体 */
+.toc__menu {
+  font-size: {{ size_config.toc }} !important;
+}
+
+.toc__menu li {
+  line-height: 1.4;
+}
+
+/* 段落间距优化 */
+.page__content p {
+  margin-bottom: 1.2em;
+}
+
+.page__content li {
+  margin-bottom: 0.3em;
+}
+
+/* 响应式调整 */
+@media (max-width: {{ site.data.font-sizes.responsive.tablet.max_width }}) {
+  .page__content {
+    font-size: calc({{ size_config.content }} * {{ site.data.font-sizes.responsive.tablet.scale_factor }}) !important;
+  }
+  
+  .page__content pre, 
+  .page__content code {
+    font-size: calc({{ size_config.code }} * {{ site.data.font-sizes.responsive.tablet.scale_factor }}) !important;
+  }
+}
+
+@media (max-width: {{ site.data.font-sizes.responsive.mobile.max_width }}) {
+  .page__content {
+    font-size: calc({{ size_config.content }} * {{ site.data.font-sizes.responsive.mobile.scale_factor }}) !important;
+  }
+  
+  .page__content pre, 
+  .page__content code {
+    font-size: calc({{ size_config.code }} * {{ site.data.font-sizes.responsive.mobile.scale_factor }}) !important;
+  }
+  
+  .page__content h1 { font-size: calc({{ size_config.h1 }} * 0.9) !important; }
+  .page__content h2 { font-size: calc({{ size_config.h2 }} * 0.9) !important; }
+  .page__content h3 { font-size: calc({{ size_config.h3 }} * 0.9) !important; }
+}
+
+/* 语言切换器字体 */
+.language-switcher {
+  font-size: {{ size_config.code }};
+}
+
+.language-switcher strong {
+  font-size: inherit;
+}
+
+.language-switcher a {
+  font-size: inherit;
+}
+</style>

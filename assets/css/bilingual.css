@@ -1,0 +1,102 @@
+/* 语言切换器样式 */
+.language-switcher {
+  margin-bottom: 20px;
+  padding: 15px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid #dee2e6;
+}
+
+.language-switcher strong {
+  color: #495057;
+  font-size: 14px;
+  margin-right: 15px;
+}
+
+.language-switcher a {
+  display: inline-block;
+  margin: 0 8px;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 123, 255, 0.2);
+}
+
+.language-switcher a:hover {
+  background-color: #0056b3;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+}
+
+.language-switcher a.active {
+  background-color: #28a745;
+  box-shadow: 0 2px 4px rgba(40, 167, 69, 0.2);
+}
+
+.language-switcher a.active:hover {
+  background-color: #1e7e34;
+  box-shadow: 0 4px 8px rgba(40, 167, 69, 0.3);
+}
+
+/* 嵌入式图片样式 */
+.embedded-image {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  margin: 20px auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.embedded-image:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* 响应式图片大小控制 */
+@media (min-width: 768px) {
+  .embedded-image {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 767px) {
+  .embedded-image {
+    max-width: 100%;
+    margin: 15px auto;
+  }
+  
+  .language-switcher {
+    padding: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .language-switcher a {
+    margin: 5px 4px;
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+}
+
+/* 代码块优化 */
+.highlight {
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* 提示块样式优化 */
+.notice--info {
+  border-left: 4px solid #007bff;
+}
+
+.notice--warning {
+  border-left: 4px solid #ffc107;
+}

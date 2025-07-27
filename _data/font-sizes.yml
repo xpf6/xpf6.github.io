@@ -1,0 +1,43 @@
+# 字体大小配置
+sizes:
+  small:
+    content: 13px
+    h1: 1.6em
+    h2: 1.4em
+    h3: 1.2em
+    h4: 1.0em
+    code: 12px
+    toc: 12px
+    line_height: 1.5
+    
+  medium:
+    content: 14px
+    h1: 1.8em
+    h2: 1.5em
+    h3: 1.3em
+    h4: 1.1em
+    code: 13px
+    toc: 13px
+    line_height: 1.6
+    
+  large:
+    content: 16px
+    h1: 2.0em
+    h2: 1.7em
+    h3: 1.4em
+    h4: 1.2em
+    code: 14px
+    toc: 14px
+    line_height: 1.7
+
+# 默认大小
+default: medium
+
+# 响应式断点
+responsive:
+  mobile:
+    max_width: 768px
+    scale_factor: 0.9
+  tablet:
+    max_width: 1024px
+    scale_factor: 0.95

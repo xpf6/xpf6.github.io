@@ -1,0 +1,10 @@
+<div class="language-switcher">
+  <strong>Language / 语言:</strong>
+  {% for language in page.languages %}
+    {% if language.code == page.lang %}
+      <a href="{{ language.url }}" class="active">{{ language.name }}</a>
+    {% else %}
+      <a href="{{ language.url }}">{{ language.name }}</a>
+    {% endif %}
+  {% endfor %}
+</div>
