@@ -4,9 +4,11 @@
 {% if site.footer.links or show_atom %}
 <div class="page__footer-follow">
   <ul class="social-icons">
-    {% if site.data.ui-text[site.locale].follow_label %}
+    <!-- 关于follow的部分，如果想要显示，取消注释即可 -->
+    <!-- {% if site.data.ui-text[site.locale].follow_label %}
       <li><strong>{{ site.data.ui-text[site.locale].follow_label }}</strong></li>
-    {% endif %}
+    {% endif %} -->
+    
 
     {% if site.footer.links %}
       {% for link in site.footer.links %}
@@ -16,9 +18,10 @@
       {% endfor %}
     {% endif %}
 
-    {% unless site.atom_feed.hide %}
+    <!-- 关于feed的部分，如果想要显示，取消注释 -->
+    <!-- {% unless site.atom_feed.hide %}
       <li><a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | relative_url }}{% endif %}"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].feed_label | default: "Feed" }}</a></li>
-    {% endunless %}
+    {% endunless %} -->
   </ul>
 </div>
 {% endif %}
