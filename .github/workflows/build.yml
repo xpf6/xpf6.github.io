@@ -45,3 +45,6 @@ jobs:
       env:
         ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
       continue-on-error: true
+
+name: Fix Git ownership
+run: git config --global --add safe.directory /github/workspace
