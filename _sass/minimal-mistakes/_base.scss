@@ -160,6 +160,8 @@ pre {
 
 pre {
   overflow-x: auto; /* add scrollbars to wide code blocks*/
+  white-space: pre;
+  word-wrap: normal;
 }
 
 /* horizontal rule */
@@ -338,4 +340,14 @@ input[type="submit"],
 .archive__item-teaser {
   -webkit-transition: $global-transition;
   transition: $global-transition;
+}
+
+
+code {
+  white-space: pre;
+}
+
+.highlight pre {
+  overflow-x: auto;
+  white-space: pre;
 }
