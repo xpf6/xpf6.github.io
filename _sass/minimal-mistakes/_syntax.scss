@@ -22,6 +22,8 @@ figure.highlight {
   pre.highlight {
     margin: 0;
     padding: 1em;
+    overflow-x: auto; /* 允许水平滚动 */
+    -webkit-overflow-scrolling: touch; /* 启用 iOS 上的平滑滚动 */
   }
 }
 
